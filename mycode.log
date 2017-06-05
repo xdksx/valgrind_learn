@@ -1,0 +1,139 @@
+==00:00:00:00.000 24358== Memcheck, a memory error detector
+==00:00:00:00.000 24358== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 24358== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 24358== Command: ./test_out_of_range
+==00:00:00:00.000 24358== Parent PID: 14096
+==00:00:00:00.000 24358== 
+--00:00:00:00.000 24358-- 
+--00:00:00:00.000 24358-- Valgrind options:
+--00:00:00:00.000 24358--    --tool=memcheck
+--00:00:00:00.000 24358--    --show-reachable=yes
+--00:00:00:00.000 24358--    --read-var-info=yes
+--00:00:00:00.000 24358--    --verbose
+--00:00:00:00.000 24358--    --error-limit=yes
+--00:00:00:00.000 24358--    --time-stamp=yes
+--00:00:00:00.000 24358--    --leak-check=full
+--00:00:00:00.000 24358--    --log-file=mycode.log
+--00:00:00:00.000 24358-- Contents of /proc/version:
+--00:00:00:00.000 24358--   Linux version 4.4.0-78-generic (buildd@lgw01-11) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #99-Ubuntu SMP Thu Apr 27 15:29:09 UTC 2017
+--00:00:00:00.000 24358-- 
+--00:00:00:00.000 24358-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--00:00:00:00.000 24358-- Page sizes: currently 4096, max supported 4096
+--00:00:00:00.000 24358-- Valgrind library directory: /usr/lib/valgrind
+--00:00:00:00.000 24358-- Reading syms from /home/ksx/workspace/valgrind/test_out_of_range
+--00:00:00:00.003 24358-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--00:00:00:00.003 24358--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--00:00:00:00.004 24358--   .. CRC mismatch (computed 10768843 wanted ef0d0121)
+--00:00:00:00.005 24358--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--00:00:00:00.009 24358--   .. CRC is valid
+--00:00:00:00.151 24358-- warning: addVar: unknown size (seen)
+--00:00:00:00.151 24358-- warning: addVar: unknown size (arg)
+--00:00:00:00.151 24358-- warning: addVar: unknown size (arg)
+--00:00:00:00.151 24358-- warning: addVar: unknown size (arg)
+--00:00:00:00.152 24358-- warning: addVar: unknown size (ap)
+--00:00:00:00.155 24358-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--00:00:00:00.155 24358--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--00:00:00:00.164 24358--   .. CRC mismatch (computed 5529a2c7 wanted 5bd23904)
+--00:00:00:00.166 24358--    object doesn't have a symbol table
+--00:00:00:00.166 24358--    object doesn't have a dynamic symbol table
+--00:00:00:00.177 24358-- Scheduler: using generic scheduler lock implementation.
+--00:00:00:00.179 24358-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==00:00:00:00.179 24358== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-24358-by-ksx-on-???
+==00:00:00:00.179 24358== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-24358-by-ksx-on-???
+==00:00:00:00.179 24358== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-24358-by-ksx-on-???
+==00:00:00:00.179 24358== 
+==00:00:00:00.179 24358== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==00:00:00:00.179 24358== don't want to do, unless you know exactly what you're doing,
+==00:00:00:00.179 24358== or are doing some strange experiment):
+==00:00:00:00.179 24358==   /usr/lib/valgrind/../../bin/vgdb --pid=24358 ...command...
+==00:00:00:00.179 24358== 
+==00:00:00:00.179 24358== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==00:00:00:00.179 24358==   /path/to/gdb ./test_out_of_range
+==00:00:00:00.179 24358== and then give GDB the following command
+==00:00:00:00.179 24358==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=24358
+==00:00:00:00.179 24358== --pid is optional if only one valgrind process is running
+==00:00:00:00.179 24358== 
+--00:00:00:00.188 24358-- REDIR: 0x401cdc0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--00:00:00:00.225 24358-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--00:00:00:00.225 24358--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--00:00:00:00.225 24358--   .. CRC mismatch (computed a30c8eaa wanted 7ae2fed4)
+--00:00:00:00.225 24358--    object doesn't have a symbol table
+--00:00:00:00.230 24358-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--00:00:00:00.230 24358--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--00:00:00:00.230 24358--   .. CRC mismatch (computed 402c2ab5 wanted 745f25ae)
+--00:00:00:00.230 24358--    object doesn't have a symbol table
+==00:00:00:00.231 24358== WARNING: new redirection conflicts with existing -- ignoring it
+--00:00:00:00.231 24358--     old: 0x0401cdc0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--00:00:00:00.231 24358--     new: 0x0401cdc0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--00:00:00:00.234 24358-- REDIR: 0x401b710 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--00:00:00:00.235 24358-- REDIR: 0x401b930 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--00:00:00:00.237 24358-- REDIR: 0x401db20 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--00:00:00:00.247 24358-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--00:00:00:00.247 24358--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--00:00:00:00.255 24358--   .. CRC mismatch (computed f3344b67 wanted 8e4ae80b)
+--00:00:00:00.257 24358--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--00:00:00:00.301 24358--   .. CRC is valid
+--00:00:00:02.163 24358-- warning: addVar: unknown size (ap)
+--00:00:00:02.163 24358-- warning: addVar: unknown size (ap)
+--00:00:00:02.163 24358-- warning: addVar: unknown size (ap)
+--00:00:00:02.163 24358-- warning: addVar: unknown size (ap_save)
+--00:00:00:02.165 24358-- warning: addVar: unknown size (arg)
+--00:00:00:02.300 24358-- REDIR: 0x4ec8e50 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.301 24358-- REDIR: 0x4ec46d0 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.302 24358-- REDIR: 0x4ecb140 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.302 24358-- REDIR: 0x4ec6b40 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.302 24358-- REDIR: 0x4ec6ed0 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.303 24358-- REDIR: 0x4ec859b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--00:00:00:02.313 24358-- REDIR: 0x4ec6850 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--00:00:00:02.324 24358-- REDIR: 0x4ebd580 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+==00:00:00:02.325 24358== Invalid write of size 4
+==00:00:00:02.325 24358==    at 0x4005B0: main (test.c:13)
+==00:00:00:02.325 24358==  Address 0x5203054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:02.325 24358==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:02.325 24358==    by 0x400585: main (test.c:7)
+==00:00:00:02.325 24358== 
+==00:00:00:02.325 24358== Invalid read of size 4
+==00:00:00:02.325 24358==    at 0x4005BA: main (test.c:14)
+==00:00:00:02.325 24358==  Address 0x5203054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:02.325 24358==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:02.325 24358==    by 0x400585: main (test.c:7)
+==00:00:00:02.325 24358== 
+--00:00:00:02.326 24358-- REDIR: 0x4ecfbb0 (libc.so.6:strchrnul) redirected to 0x4c34da0 (strchrnul)
+--00:00:00:02.349 24358-- REDIR: 0x4ebd940 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== HEAP SUMMARY:
+==00:00:00:02.355 24358==     in use at exit: 20 bytes in 1 blocks
+==00:00:00:02.355 24358==   total heap usage: 2 allocs, 1 frees, 1,044 bytes allocated
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== Searching for pointers to 1 not-freed blocks
+==00:00:00:02.355 24358== Checked 67,016 bytes
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== 20 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==00:00:00:02.355 24358==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:02.355 24358==    by 0x400585: main (test.c:7)
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== LEAK SUMMARY:
+==00:00:00:02.355 24358==    definitely lost: 20 bytes in 1 blocks
+==00:00:00:02.355 24358==    indirectly lost: 0 bytes in 0 blocks
+==00:00:00:02.355 24358==      possibly lost: 0 bytes in 0 blocks
+==00:00:00:02.355 24358==    still reachable: 0 bytes in 0 blocks
+==00:00:00:02.355 24358==         suppressed: 0 bytes in 0 blocks
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== 1 errors in context 1 of 3:
+==00:00:00:02.355 24358== Invalid read of size 4
+==00:00:00:02.355 24358==    at 0x4005BA: main (test.c:14)
+==00:00:00:02.355 24358==  Address 0x5203054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:02.355 24358==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:02.355 24358==    by 0x400585: main (test.c:7)
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== 1 errors in context 2 of 3:
+==00:00:00:02.355 24358== Invalid write of size 4
+==00:00:00:02.355 24358==    at 0x4005B0: main (test.c:13)
+==00:00:00:02.355 24358==  Address 0x5203054 is 0 bytes after a block of size 20 alloc'd
+==00:00:00:02.355 24358==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:02.355 24358==    by 0x400585: main (test.c:7)
+==00:00:00:02.355 24358== 
+==00:00:00:02.355 24358== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
